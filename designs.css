@@ -1,0 +1,663 @@
+/* =====================================================
+   DESIGNS PAGE
+===================================================== */
+
+:root {
+
+    --brown-dark: #24150f;
+    --brown: #4b2b20;
+    --brown-light: #704333;
+
+    --gold: #c99a45;
+    --gold-light: #e4bd6a;
+
+    --cream: #faf6ef;
+    --white: #ffffff;
+
+}
+
+
+/* =====================================================
+   PAGE HERO
+===================================================== */
+
+.design-page-hero {
+
+    min-height: 75vh;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    background:
+        linear-gradient(
+            rgba(36, 21, 15, 0.78),
+            rgba(36, 21, 15, 0.88)
+        ),
+        url("images/1_new.webp");
+
+    background-size: cover;
+
+    background-position: center;
+
+    color: white;
+
+    padding-top: 100px;
+
+}
+
+
+.design-hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            transparent,
+            rgba(0, 0, 0, 0.25)
+        );
+
+}
+
+
+.design-hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 750px;
+
+    text-align: center;
+
+    margin: auto;
+
+}
+
+
+.design-hero-content > span {
+
+    display: block;
+
+    color: var(--gold-light);
+
+    letter-spacing: 4px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    margin-bottom: 20px;
+
+}
+
+
+.design-hero-content h1 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: clamp(55px, 8vw, 100px);
+
+    line-height: 0.95;
+
+    margin: 0;
+
+    font-weight: 600;
+
+}
+
+
+.design-hero-content h1 em {
+
+    display: block;
+
+    color: var(--gold-light);
+
+    font-weight: 400;
+
+}
+
+
+.design-hero-content p {
+
+    max-width: 600px;
+
+    margin: 30px auto;
+
+    color: rgba(255,255,255,0.8);
+
+    line-height: 1.8;
+
+    font-size: 16px;
+
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.design-intro {
+
+    padding: 110px 0 60px;
+
+    background: var(--cream);
+
+}
+
+
+/* =====================================================
+   CATEGORY
+===================================================== */
+
+.design-category {
+
+    padding: 100px 0;
+
+    background: var(--cream);
+
+}
+
+
+.category-dark {
+
+    background: var(--brown-dark);
+
+    color: white;
+
+}
+
+
+.category-heading {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 35px;
+
+    margin-bottom: 55px;
+
+}
+
+
+.category-number {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 70px;
+
+    line-height: 0.8;
+
+    color: var(--gold);
+
+    min-width: 90px;
+
+}
+
+
+.category-heading span {
+
+    display: block;
+
+    color: var(--gold);
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.category-heading h2 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: clamp(42px, 5vw, 65px);
+
+    line-height: 1;
+
+    margin-bottom: 18px;
+
+}
+
+
+.category-heading p {
+
+    max-width: 650px;
+
+    margin: 0;
+
+    line-height: 1.8;
+
+    opacity: 0.7;
+
+}
+
+
+/* =====================================================
+   IMAGE CARD
+===================================================== */
+
+.design-image-card {
+
+    position: relative;
+
+    height: 560px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    background: #ddd;
+
+}
+
+
+.design-image-card img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        transform 0.8s ease;
+
+}
+
+
+.design-image-card:hover img {
+
+    transform: scale(1.06);
+
+}
+
+
+.image-overlay {
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    padding: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0,0,0,0.85)
+        );
+
+    color: white;
+
+    padding-top: 80px;
+
+}
+
+
+.image-overlay span {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 25px;
+
+}
+
+
+.image-overlay i {
+
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid rgba(255,255,255,0.5);
+
+    border-radius: 50%;
+
+    transition: 0.3s;
+
+}
+
+
+.design-image-card:hover
+.image-overlay i {
+
+    background: var(--gold);
+
+    border-color: var(--gold);
+
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.design-cta {
+
+    padding: 120px 20px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(75, 43, 32, 0.94),
+            rgba(36, 21, 15, 0.96)
+        ),
+        url("images/3_new.webp");
+
+    background-size: cover;
+
+    background-position: center;
+
+    color: white;
+
+}
+
+
+.design-cta-content {
+
+    max-width: 750px;
+
+    margin: auto;
+
+}
+
+
+.design-cta-content > span {
+
+    color: var(--gold-light);
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    font-weight: 600;
+
+}
+
+
+.design-cta-content h2 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: clamp(45px, 6vw, 75px);
+
+    line-height: 1;
+
+    margin: 20px 0;
+
+}
+
+
+.design-cta-content h2 em {
+
+    color: var(--gold-light);
+
+    font-weight: 400;
+
+}
+
+
+.design-cta-content p {
+
+    color: rgba(255,255,255,0.75);
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.design-footer {
+
+    background: #170d09;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 65px 0 25px;
+
+}
+
+
+.design-footer .footer-logo {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 32px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+}
+
+
+.design-footer .footer-logo span {
+
+    display: block;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 5px;
+
+    color: var(--gold);
+
+    margin-top: 4px;
+
+}
+
+
+.design-footer p {
+
+    color: rgba(255,255,255,0.55);
+
+    margin: 15px 0 30px;
+
+}
+
+
+.footer-links {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 45px;
+
+}
+
+
+.footer-links a {
+
+    color: rgba(255,255,255,0.7);
+
+    text-decoration: none;
+
+    transition: 0.3s;
+
+}
+
+
+.footer-links a:hover {
+
+    color: var(--gold-light);
+
+}
+
+
+.footer-bottom {
+
+    border-top: 1px solid rgba(255,255,255,0.1);
+
+    padding-top: 25px;
+
+    color: rgba(255,255,255,0.4);
+
+    font-size: 13px;
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 991px) {
+
+    .design-page-hero {
+
+        min-height: 70vh;
+
+    }
+
+    .design-category {
+
+        padding: 80px 0;
+
+    }
+
+    .design-image-card {
+
+        height: 480px;
+
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .design-page-hero {
+
+        min-height: 75vh;
+
+    }
+
+    .design-intro {
+
+        padding-top: 80px;
+
+    }
+
+    .category-heading {
+
+        gap: 20px;
+
+    }
+
+    .category-number {
+
+        font-size: 50px;
+
+        min-width: 55px;
+
+    }
+
+    .category-heading h2 {
+
+        font-size: 43px;
+
+    }
+
+    .design-image-card {
+
+        height: 430px;
+
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .design-page-hero-content {
+
+        padding: 0 15px;
+
+    }
+
+    .design-hero-content h1 {
+
+        font-size: 55px;
+
+    }
+
+    .category-heading {
+
+        display: block;
+
+    }
+
+    .category-number {
+
+        margin-bottom: 20px;
+
+    }
+
+    .design-image-card {
+
+        height: 380px;
+
+    }
+
+    .image-overlay span {
+
+        font-size: 21px;
+
+    }
+
+}
